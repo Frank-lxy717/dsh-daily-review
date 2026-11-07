@@ -1,0 +1,8 @@
+# dsh-daily-review bundle patch.
+# The row is the package itself: the host half (exports ".") owns the on-disk
+# archive plus the loopback JSON routes and the agent tools; the `dsh.client`
+# declaration in package.json loads the browser half (exports "./client") into
+# the Web GUI, where it registers one sidebar row and the matching main panel.
+- insert:
+    - id: daily-review
+      name: dsh-daily-review

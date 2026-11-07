@@ -1,0 +1,56 @@
+{
+  "name": "dsh-daily-review",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first daily review (日精进) archive for DeepSeek Harness: folders with per-folder section templates, date navigation, search, and agent tools over plain Markdown files.",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.1.7-rc.2 <1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frank-lxy717/dsh-daily-review.git"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "daily-review",
+    "journal",
+    "markdown",
+    "plugin"
+  ]
+}
